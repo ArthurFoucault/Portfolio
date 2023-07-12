@@ -1,0 +1,23 @@
+body {
+    font-family: Arial, sans-serif;
+  }
+
+footer {
+    text-align:center;
+    padding: 5px;
+    background-color: #07a3a3;
+    color: #000;
+}
+  
+h1 {
+    color: blue;
+}
+  
+p {
+    color: gray;
+}
+  
+.container {
+    background-color: lightgray;
+    padding: 10px;
+}
