@@ -1,51 +1,24 @@
-.img {
-    height: 30%;
-    width: 100%;
-	padding: 100px 0;
-    text-align: center;
-    background-image: url("img/coding.webp");
-    background-color: #cccccc; /* Utilisé si l'image n'est pas disponible */
-    background-position: center; /* Centre l'image */
-    background-repeat: no-repeat; /* Ne pas répéter l'image */
-    background-size: cover; /* Redimensionne l'image de fond pour couvrir l'intégralité du conteneur */
-  }
+/*---------------------------------------------------------------------------------
 
-  .container {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-	
-  }
-  
-  .titre {
-    width: 40%;
-    height: 50%;
-    margin: auto;
-    text-align: center;
-    background-color: rgb(0, 0, 0);
-    color: white;
-  }
-  
-  .menuBar {
-    height: auto;
-    width: 100%;
-    text-align: center;
-    background-color: rgb(0, 0, 0);
-    color: white;
-  }
-  
-  .contenu {
-    height: 40%;
-    width: 100%;
-    text-align: center;
-    background-color: rgb(255, 255, 255);
-  }
+	0.	CSS Reset
+	1.	Document Setup
+	2.  Element Base
+	3.  Structure
+	4.	Header
+	5.	Navigation
+	6.	Main Content
+	7.  Single post
+	8.	Blocks
+	9.	Post Content
+	11.	Pagination
+	12.	Page & Page Templates
+	13.	Sidebar
+	14.	Footer
+	15. Credits
+	16.	Media Queries
 
-  /* style.css exemple */
+----------------------------------------------------------------------------------- */
+
 
 /* -------------------------------------------------------------------------------- */
 /*	0. CSS Reset
@@ -83,12 +56,6 @@ body {
 	color: #444;
 	font-family: 'Lato', sans-serif;
 	font-size: 18px;
-}
-
-* {
-		-webkit-box-sizing: border-box;
-		-moz-box-sizing: border-box;
-	box-sizing: border-box;
 }
 
 img {
@@ -208,7 +175,7 @@ main {
 }
 
 h1, h2, h3, h4, h5, h6, .faux-heading {
-	color: blue;
+	color: #444;
 	font-feature-settings: "lnum";
 	font-variant-numeric: lining-nums;
 	font-weight: 700;
@@ -231,7 +198,6 @@ h6 {
 }
 
 p {
-    color: gray;
 	line-height: 1.5;
 	margin: 0 0 20px 0;
 }
@@ -281,7 +247,7 @@ hr {
 }
 
 a {
-	color: #1abc9c;
+	color: #0ae8bb;
 	text-decoration: none;
 }
 
@@ -541,8 +507,8 @@ input[type="submit"]:hover {
 .section.small-padding { padding: 2.5% 0; }
 .section.no-padding { padding: 0; }
 
-.section.bg-dark { background: #1d1d1d; }
-.section.bg-dark-light { background: #262626; }
+.section.bg-dark { background: #ef2626; }
+.section.bg-dark-light { background: black; }
 
 .bg-shade {
 	position: absolute;
@@ -584,9 +550,18 @@ input[type="submit"]:hover {
 }
 
 .sidebar {
-	width: 27.5%;
+	width: 30%;
 }
 
+.content-container {
+    display: flex;
+    align-items: center; /* Aligne verticalement le contenu */
+}
+
+.text-container {
+    flex: 1; /* Prend l'espace restant disponible */
+    padding-left: 20px; /* Espace entre l'image et le texte */
+}
 
 /* -------------------------------------------------------------------------------- */
 /*	4. Header
@@ -610,20 +585,16 @@ input[type="submit"]:hover {
 }
 
 .blog-logo {
-	display: inline-block;
-	line-height: 1;
-	margin: 0;
-}
-
-.blog-logo a,
-.blog-logo img {
-	display: block;
+	display: flex;
+	align-items: center;
+	flex: 1; /* Prend l'espace restant disponible */
+    padding-left: 20px; /* Espace entre l'image et le texte */
 }
 
 .blog-logo img {
 	height: auto;
 	max-height: 250px;
-	max-width: 100%;
+	max-width: 20%;
 	width: auto;
 }
 
@@ -672,6 +643,42 @@ input[type="submit"]:hover {
 	margin: 20px auto;
 }
 
+.image-container {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.link-with-animation {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.link-with-animation img {
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.link-with-animation:hover img {
+    transform: translateX(-100%);
+}
+
+.animated-text {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background-color: #1abc9c;
+    color: #fff;
+    padding: 5px 10px;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+}
+
+.link-with-animation:hover .animated-text {
+    left: 0;
+}
 
 /* -------------------------------------------------------------------------------- */
 /*	5. Navigation
@@ -712,7 +719,7 @@ input[type="submit"]:hover {
 }
 
 .blog-menu a {
-	color: rgba( 255, 255, 255, 0.5 );
+	color: rgba( 0, 0, 0);
 	display: block;
 	font-size: 13px;
 	letter-spacing: 1px;
@@ -1684,285 +1691,6 @@ figure {
 	line-height: 1.5;
 }
 
-
-/* -------------------------------------------------------------------------------- */
-/*	10. Comments
-/* -------------------------------------------------------------------------------- */
-
-
-.comments,
-.comment-respond {
-	border-top: 4px solid #eee;
-	padding-top: 10%;
-	margin-top: 10%;
-}
-
-.post-meta-bottom + .comments,
-.post-meta-bottom + .comment-respond {
-	border-top: none;
-	padding-top: 0;
-}
-
-.comments-title,
-#reply-title,
-.pingbacks-title {
-	font-size: 1.75em;
-	font-weight: 400;
-	color: #2d2d2d;
-}
-
-.comments-title { margin-bottom: 10%; }
-
-ol.commentlist,
-ol.commentlist ul.children {
-	list-style: none;
-	margin: 0;
-}
-
-li.comment,
-li > div.comment {
-	margin: 0 0 25px;
-	position: relative;
-}
-
-li > div.comment {
-	padding-bottom: 25px;
-	border-bottom: 1px solid #eee;
-}
-
-.commentlist > li:first-child > div.comment:first-child { border-top: 1px solid #eee; padding-top: 25px; }
-
-.children > li > div.comment { padding-left: 10%; }
-.children .children > li > div.comment { padding-left: 20%; }
-.children .children .children > li > div.comment { padding-left: 30%; }
-.children .children .children .children > li > div.comment { padding-left: 40%; }
-.children .children .children .children .children > li > div.comment { padding-left: 50%; }
-
-.comment .children li:last-child { margin-bottom: 0; }
-
-.commentlist > li.comment:last-child,
-.commentlist > li.comment div.comment:last-child {
-	margin-bottom: 0;
-}
-
-/* Pingback List ----------------------------- */
-
-.comments .pingbacks {
-	margin-top: 5.5%;
-}
-
-.pingbacks-inner {
-	margin: 0 auto;
-}
-
-.pingbacks-title {
-	margin-bottom: 20px;
-}
-
-.pingback-list li {
-	padding: 0.5em;
-	line-height: 130%;
-}
-
-.pingback-list a:hover {
-	text-decoration: underline;
-}
-
-.pingback-list li:nth-child(odd) {
-	background: #f9f9f9;
-}
-
-.pingback-list .comment-edit-link { color: #767676; }
-.pingback-list .comment-edit-link:hover { color: #444; text-decoration: none; }
-
-/* Comment Meta ------------------------------ */
-
-.comment-meta { margin-bottom: 1em; }
-
-.comment-meta .avatar {
-	display: block;
-	height: 50px;
-	width: 50px;
-	border-radius: 999px;
-	float: left;
-}
-
-.comment-actions {
-	font-size: 0.7em;
-	text-transform: uppercase;
-	letter-spacing: 1px;
-	font-weight: 700;
-}
-
-.comment-actions a { margin-left: 8px; }
-.comment-actions a:first-child { margin-left: 0; }
-
-.comment-meta-content {
-	margin-left: 70px;
-	padding-top: 7px;
-}
-
-.comment-meta-content cite {
-	font-size: 1.075em;
-	color: #444;
-	margin-bottom: 5px;
-	display: block;
-	font-weight: 700;
-}
-
-.bypostauthor .comment-meta-content cite .post-author {
-	font-weight: 400;
-	color: #767676;
-	margin-left: 3px;
-	letter-spacing: 0;
-}
-
-.comment-meta-content cite a { color: inherit; }
-.comment-meta-content cite a:hover {
-	color: #1abc9c;
-	text-decoration: none;
-}
-
-.comment-meta-content p {
-	font-size: 0.8em;
-}
-
-.comment-meta-content p a { color: #BBB; }
-.comment-meta-content p a:hover { color: #1abc9c; }
-
-.comment-awaiting-moderation {
-	position: absolute;
-	right: 0;
-	top: 4px;
-	font-weight: bold;
-	display: block;
-	padding: 10px;
-	background: #CCC;
-	border-radius: 3px;
-	font-size: 0.8rem;
-	color: #fff;
-	text-transform: uppercase;
-	letter-spacing: 1px;
-}
-
-.comment-awaiting-moderation:hover { background: #2d2d2d; }
-
-/* Comment Navigation ------------------------ */
-
-.comment-nav-below {
-	background: none;
-	border-top: 4px solid #eee;
-	color: #666;
-	font-size: 0.85em;
-	font-weight: 700;
-	letter-spacing: 1px;
-	margin: 10% 0 -5% 0;
-	padding-top: 5%;
-	text-transform: uppercase;
-}
-
-.comment-nav-below a,
-.comment-nav-below a:hover {
-	color: inherit;
-}
-
-/* Comment Content --------------------------- */
-
-.comment-content {
-	margin-left: 70px;
-	font-size: 1em;
-}
-
-/* Comment Respond --------------------------- */
-
-.comment-respond {
-	border-top: 0;
-	padding-top: 0;
-}
-
-.comments + .comment-respond {
-	padding-top: 10%;
-	border-top: 4px solid #eee;
-	margin-top: 10%;
-}
-
-#reply-title { margin: 0 0 20px; }
-
-#respond a:hover { text-decoration: underline; }
-
-#respond .content-section-right {
-	border-radius: 0 0 4px 4px;
-	border-top: 1px solid #eee;
-	z-index: 12;
-}
-
-#cancel-comment-reply-link {
-	margin-left: 10px;
-	font-size: 0.9rem;
-	text-transform: uppercase;
-	letter-spacing: 1px;
-	font-weight: 700;
-}
-
-#respond p,
-#respond code {
-	line-height: 150%;
-}
-
-#respond code { border-radius: 2px; }
-
-.comment-form {
-	margin: 0;
-}
-
-.comment-form p { margin-bottom: 20px; }
-.comment-form p:last-child { margin-bottom: 0; }
-
-.comment-form label {
-	display: block;
-	margin: 0 0 8px 0;
-}
-
-p.comment-notes,
-p.logged-in-as {
-	margin-bottom: 10%;
-	color: #666;
-}
-
-p.comment-notes a,
-p.logged-in-as a {
-	color: inherit;
-}
-
-.comment-form input {
-	max-width: 75%;
-}
-
-p.form-allowed-tags {
-	margin-top: 1.5em;
-	line-height: 160%
-}
-
-.comment-form p.form-submit { margin: 1.5em 0 0; }
-
-/* IN COMMENTLIST */
-
-.commentlist .comment-respond {
-	margin: 25px 0;
-	padding-bottom: 25px;
-	border-bottom: 1px solid #eee;
-}
-
-.commentlist .comment-reply-title {
-	margin-bottom: 10px;
-}
-
-.commentlist p.comment-notes,
-.commentlist p.logged-in-as {
-	margin-bottom: 20px;
-}
-
-
 /* -------------------------------------------------------------------------------- */
 /*	11. Pagination
 /* -------------------------------------------------------------------------------- */
@@ -2072,7 +1800,7 @@ p.form-allowed-tags {
 /* Widget Content ---------------------------- */
 
 .widget-content {
-	color: #555;
+	color: #000;
 	font-size: 1rem;
 	line-height: 140%;
 }
@@ -2288,7 +2016,7 @@ p.form-allowed-tags {
 /* Footer Widgets ---------------------------- */
 
 .footer .widget {
-	border-bottom-color: #333;
+	border-bottom-color: #000;
 }
 
 .footer .widget-title {
@@ -2298,11 +2026,11 @@ p.form-allowed-tags {
 }
 
 .footer .widget-content {
-	color: #858585;
+	color: #000;
 }
 
 .footer .widget-content ul li {
-	border-top-color: #333;
+	border-top-color: #000;
 }
 
 /* Widget: Calendar -------------------------- */
@@ -2333,14 +2061,14 @@ p.form-allowed-tags {
 }
 
 .credits-inner {
-	border-top: 2px solid rgba(255,255,255,0.1);
+	border-top: 2px solid rgba(0,0,0);
 	letter-spacing: 1px;
 	padding: 25px 0 4%;
 	text-transform: uppercase;
 }
 
 .credits {
-	color: #858585;
+	color: #000;
 }
 
 .credits a,
@@ -2504,7 +2232,7 @@ p.form-allowed-tags {
 
 	.blog-search,
 	.navigation {
-		background-color: #282828;
+		background-color: #030303;
 	}
 
 	.blog-search .search-form .search-submit {
