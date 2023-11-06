@@ -71,9 +71,11 @@
             </div>
             <!-- .navigation -->
             <main class="wrapper section-inner group" id="site-content">
-              <h2>Sous-titre</h2>
-              <p>Un autre paragraphe de texte.</p>
+                <h2>Sous-titre</h2>
+                <p>Un autre paragraphe de texte.</p>
             </main>
+            <!-- .wrapper -->
+            <!-- .contenu -->
             <div class="footer section large-padding bg-dark">
                 <div class="footer-inner section-inner group">
                     <div class="column column-1 left">
@@ -81,8 +83,8 @@
                             <div id="block-17" class="widget widget_block">
                                 <div class="widget-content">
                                     <ul class="wp-block-page-list">
-                                        <li class="wp-block-pages-list__item current-menu-item menu-item-home">
-                                            <a class="wp-block-pages-list__item__link" href="https://arthurfoucault.github.io/Portfolio/" aria-current="page">Accueil</a>
+                                        <li class="wp-block-pages-list__item">
+                                            <a class="wp-block-pages-list__item__link" href="https://arthurfoucault.github.io/Portfolio/">Accueil</a>
                                         </li>
                                         <li class="wp-block-pages-list__item">
                                             <a class="wp-block-pages-list__item__link" href="https://arthurfoucault.github.io/Portfolio/CV">CV</a>
@@ -90,8 +92,8 @@
                                         <li class="wp-block-pages-list__item">
                                             <a class="wp-block-pages-list__item__link" href="https://arthurfoucault.github.io/Portfolio/Entreprise">Entreprise</a>
                                         </li>
-                                        <li class="wp-block-pages-list__item">
-                                            <a class="wp-block-pages-list__item__link" href="https://arthurfoucault.github.io/Portfolio/Projets">Projets</a>
+                                        <li class="wp-block-pages-list__item current-menu-item">
+                                            <a class="wp-block-pages-list__item__link" href="https://arthurfoucault.github.io/Portfolio/Projets" aria-current="page">Projets</a>
                                         </li>
                                         <li class="wp-block-pages-list__item">
                                             <a class="wp-block-pages-list__item__link" href="https://arthurfoucault.github.io/Portfolio/TableauSynthèse">Tableau de synthèse</a>
@@ -117,12 +119,19 @@
                         &copy;2023 Portfolio &#8211; BTS SIO SLAM
                     </p>
                     <p class="credits-right">
-                        <a title="To the top" class="tothetop">Up &uarr;</a>
+                        <a
+                            title="To the top"
+                            class="tothetop"
+                            href="#"
+                            onclick="scrollToTop(); return false;"
+                        >Up &uarr;</a>
                     </p>
                 </div>
                 <!-- .credits-inner -->
             </div>
             <!-- .credits -->
         </div>
+        <!-- .big-wrapper -->
+        <script src="public/js/accueil.js"></script>
     </body>
 </html>
