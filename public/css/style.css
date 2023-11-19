@@ -65,7 +65,10 @@ img {
 
 .hidden { display: none; }
 .left { float: left; }
-.right { float: right; }
+.right { 
+	margin: 0 130px;
+	float: right; 
+}
 
 ::selection {
 	background: #1abc9c;
