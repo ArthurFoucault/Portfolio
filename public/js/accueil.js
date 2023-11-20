@@ -37,6 +37,31 @@ function loadExcel(url) {
       // Ajouter la classe pour les cellules qui contiennent uniquement un "X"
       markCheckedCells(tableContainer);
 
+      // Appliquer des styles spécifiques en fonction de la largeur de l'écran
+      var screenWidth = window.innerWidth;
+      
+      if (screenWidth <= 1040) {
+        tableContainer.querySelector('table').style.fontSize = '14px';
+      }
+    
+      if (screenWidth <= 800) {
+        tableContainer.querySelector('table').style.fontSize = '12px';
+      }
+    
+      if (screenWidth <= 700) {
+        tableContainer.querySelector('table').style.fontSize = '10px';
+      }
+    
+      if (screenWidth <= 500) {
+        tableContainer.querySelector('table').style.fontSize = '8px';
+    
+        // Réduire l'espacement des cellules pour les écrans de largeur maximale de 500px
+        var cells = tableContainer.querySelectorAll('th, td');
+        cells.forEach(function (cell) {
+          cell.style.padding = '2px';
+        });
+      }
+
       document.getElementById("excel-preview").innerHTML = tableContainer.innerHTML;
   };
 
