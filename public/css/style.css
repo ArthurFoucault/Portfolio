@@ -65,10 +65,12 @@ img {
 
 .hidden { display: none; }
 .left { float: left; }
-.right { 
-	margin: 0 130px;
-	float: right; 
+.right { float: right; }
+.right-formation { 
+	margin: 0 150px; 
+	float: right;
 }
+.center{text-align: center;}
 
 ::selection {
 	background: #1abc9c;
@@ -718,7 +720,6 @@ input[type="submit"]:hover {
 	position: absolute;
 		left: 0;
 		top: 50%;
-	z-index: 1000;
 }
 
 .blog-menu a {
@@ -1055,6 +1056,40 @@ input[type="submit"]:hover {
 
 .post-preview.format-quote .post-content blockquote cite a:hover {
 	text-decoration: none;
+}
+
+.popup-overlay {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5) !important; /* Fond sombre semi-transparent */
+	z-index: 2 !important;
+}
+
+.popup {
+	display: none;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: #ffffff !important; /* Fond blanc */
+	color: #000000 !important; /* Texte noir */
+	padding: 20px;
+	border-radius: 10px;
+	z-index: 3 !important;
+	animation: fadeIn 0.3s ease-out; /* Animation d'ouverture */
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
 }
 
 
@@ -1510,6 +1545,32 @@ ul.wp-block-social-links:not(.alignwide):not(.alignfull):not(.aligncenter):not(.
 
 .wp-social-link {
 	margin: 0 8px 0 0;
+}
+
+.projet-block {
+	text-align: center;
+    background-color: #3498db;
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px; /* Largeur fixe */
+    height: 200px; /* Hauteur fixe */
+    margin: 0 10px; /* Ajuste les marges selon tes préférences */
+	cursor: pointer; /* Déplace le curseur sur l'ensemble du bloc */
+	position: relative;
+	z-index: 1;
+	display: inline-block; /* Affiche les éléments en ligne */
+    vertical-align: top; /* Alignement vertical en haut pour éviter des espaces indésirables */
+}
+
+.projet-block img {
+    max-width: 300px; /* ou toute autre valeur souhaitée */
+    max-height: 150px; /* pour conserver les proportions de l'image */
+    border-radius: 50%;
+}
+
+.projet-text {
+	color: #ffffff;
+	margin-top: 10px;
 }
 
 

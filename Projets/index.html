@@ -77,8 +77,33 @@
             </div>
             <!-- .navigation -->
             <main class="wrapper section-inner group" id="site-content">
-                <h2>Sous-titre</h2>
-                <p>Un autre paragraphe de texte.</p>
+                <article class="page">
+                    <h1>PROJET D'ÉCOLE</h1>
+                    <div class="projet-block" onclick="showGameCenterModal()">
+                        <img src="../img/game-center.jpg" alt="GameCenter">
+                        <div class="projet-text">
+                            <p>GameCenter</p>
+                        </div>
+                    </div>
+                    <div class="popup-overlay" id="overlay"></div>
+                    <div class="popup" id="gamecenter">
+                        <p>Contenu détaillé de ton projet. Tu peux ajouter ce que tu veux ici!</p>
+                        <button onclick="hideGameCenterModal()">Fermer</button>
+                    </div>
+
+                    <div class="projet-block" onclick="showRFTG_Modal()">
+                        <img src="../img/game-center.jpg" alt="RFTG">
+                        <div class="projet-text">
+                            <p>RFTG (Raise From The Grave)</p>
+                        </div>
+                    </div>
+                    <div class="popup-overlay" id="overlay"></div>
+                    <div class="popup" id="RFTG">
+                        <p>Contenu détaillé de ton projet. Tu peux ajouter ce que tu veux ici!</p>
+                        <button onclick="hideRFTG_Modal()">Fermer</button>
+                    </div>
+                    <h1>RÉALISATION PROFESSIONNEL</h1>
+                </article>
             </main>
             <!-- .wrapper -->
             <!-- .contenu -->
