@@ -2157,7 +2157,7 @@ figure {
 
 	body {
 		font-size: 16px;
-		overflow-x: hidden;
+		overflow-x: auto;
 	}
 
 	/* Structure ----------------------------- */
@@ -2178,7 +2178,7 @@ figure {
 
 	body {
 		font-size: 18px;
-		overflow-x: hidden;
+		overflow-x: auto;
 	}
 
 	/* Structure ----------------------------- */
@@ -2381,7 +2381,7 @@ figure {
 
 	body {
 		font-size: 16px;
-		overflow-x: hidden;
+		overflow-x: auto;
 	}
 
 	/* Element Base -------------------------- */
@@ -2567,7 +2567,7 @@ figure {
 
 	body {
 		font-size: 15px;
-		overflow-x: hidden;
+		overflow-x: auto;
 	}
 
 	/* Header -------------------------------- */
