@@ -37,31 +37,6 @@ function loadExcel(url) {
       // Ajouter la classe pour les cellules qui contiennent uniquement un "X"
       markCheckedCells(tableContainer);
 
-      // Appliquer des styles spécifiques en fonction de la largeur de l'écran
-      var screenWidth = window.innerWidth;
-      
-      if (screenWidth <= 1040) {
-        tableContainer.querySelector('table').style.fontSize = '14px';
-      }
-    
-      if (screenWidth <= 800) {
-        tableContainer.querySelector('table').style.fontSize = '12px';
-      }
-    
-      if (screenWidth <= 700) {
-        tableContainer.querySelector('table').style.fontSize = '10px';
-      }
-    
-      if (screenWidth <= 500) {
-        tableContainer.querySelector('table').style.fontSize = '8px';
-    
-        // Réduire l'espacement des cellules pour les écrans de largeur maximale de 500px
-        var cells = tableContainer.querySelectorAll('th, td');
-        cells.forEach(function (cell) {
-          cell.style.padding = '2px';
-        });
-      }
-
       document.getElementById("excel-preview").innerHTML = tableContainer.innerHTML;
   };
 
@@ -142,10 +117,30 @@ function getCellStyle(cell) {
   var cssStyle = '';
 
   if (style.fill && style.fill.type === 'pattern' && style.fill.pattern === 'solid') {
-      cssStyle += 'background-color:' + style.fill.fgColor.rgb.substring(2) + ';';
+    cssStyle += 'background-color:' + style.fill.fgColor.rgb.substring(2) + ';';
   }
   if (style.font && style.font.color && style.font.color.rgb) {
-      cssStyle += 'color:' + style.font.color.rgb.substring(2) + ';';
+    cssStyle += 'color:' + style.font.color.rgb.substring(2) + ';';
+  }
+
+  // Appliquer des styles spécifiques en fonction de la largeur de l'écran
+  var screenWidth = window.innerWidth;
+
+  if (screenWidth <= 1040) {
+    cssStyle += 'font-size: 14px;';
+  }
+
+  if (screenWidth <= 800) {
+    cssStyle += 'font-size: 12px;';
+  }
+
+  if (screenWidth <= 700) {
+    cssStyle += 'font-size: 10px;';
+  }
+
+  if (screenWidth <= 500) {
+    cssStyle += 'font-size: 8px;';
+    cssStyle += 'padding: 2px;';
   }
 
   return cssStyle;
