@@ -2160,10 +2160,6 @@ figure {
 		overflow-x: hidden;
 	}
 
-	table {
-        font-size: 14px; /* Réduit la taille de la police pour les écrans de largeur maximale de 1040px */
-    }
-
 	/* Structure ----------------------------- */
 
 	.wrapper {
@@ -2184,10 +2180,6 @@ figure {
 		font-size: 18px;
 		overflow-x: hidden;
 	}
-
-	table {
-        font-size: 12px; /* Réduit la taille de la police pour les écrans de largeur maximale de 800px */
-    }
 
 	/* Structure ----------------------------- */
 
@@ -2392,10 +2384,6 @@ figure {
 		overflow-x: hidden;
 	}
 
-	table {
-        font-size: 10px; /* Réduit la taille de la police pour les écrans de largeur maximale de 700px */
-    }
-
 	/* Element Base -------------------------- */
 
 	.post-content h1,
@@ -2581,14 +2569,6 @@ figure {
 		font-size: 15px;
 		overflow-x: hidden;
 	}
-
-	table {
-        font-size: 8px; /* Réduit la taille de la police pour les écrans de largeur maximale de 500px */
-    }
-
-    th, td {
-        padding: 2px; /* Réduit l'espacement des cellules sur les écrans de largeur maximale de 500px */
-    }
 
 	/* Header -------------------------------- */
 
