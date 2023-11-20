@@ -2153,7 +2153,12 @@ figure {
 /*	16. Media Queries
 /* -------------------------------------------------------------------------------- */
 
-
+@media {
+	body {
+	  overflow-x: auto;
+	}
+  }
+  
 @media ( max-width: 1040px ) {
 
 	body {
