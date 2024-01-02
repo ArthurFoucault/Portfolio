@@ -61,7 +61,7 @@ body {
 
 img {
 	max-width: 100%;
-	height: auto;
+	height: 100%;
 }
 
 .hidden { display: none; }
@@ -1082,6 +1082,7 @@ input[type="submit"]:hover {
 	border-radius: 10px;
 	z-index: 3 !important;
 	animation: fadeIn 0.3s ease-out; /* Animation d'ouverture */
+	text-align: center;
 }
 
 @keyframes fadeIn {
@@ -1549,24 +1550,24 @@ ul.wp-block-social-links:not(.alignwide):not(.alignfull):not(.aligncenter):not(.
 }
 
 .projet-block {
-	text-align: center;
+    text-align: center;
     background-color: #3498db;
     padding: 20px;
     border-radius: 10px;
     width: 250px; /* Largeur fixe */
     height: 200px; /* Hauteur fixe */
-    margin: 0 10px; /* Ajuste les marges selon tes préférences */
-	cursor: pointer; /* Déplace le curseur sur l'ensemble du bloc */
-	position: relative;
-	z-index: 1;
-	display: inline-block; /* Affiche les éléments en ligne */
+    margin: 10px; /* Ajoute une marge tout autour du bloc */
+    cursor: pointer; /* Déplace le curseur sur l'ensemble du bloc */
+    position: relative;
+    z-index: 1;
+    display: inline-block; /* Affiche les éléments en ligne */
     vertical-align: top; /* Alignement vertical en haut pour éviter des espaces indésirables */
 }
 
 .projet-block img {
-    max-width: 300px; /* ou toute autre valeur souhaitée */
+    max-width: 250px; /* ou toute autre valeur souhaitée */
     max-height: 150px; /* pour conserver les proportions de l'image */
-    border-radius: 50%;
+    border-radius: 20%;
 }
 
 .projet-text {

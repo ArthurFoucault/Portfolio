@@ -43,7 +43,7 @@ function showPopix_Modal() {
   document.getElementById("overlay").style.display = "block";
 }
 
-function hidePopixl_Modal() {
+function hidePopix_Modal() {
   document.getElementById("Popix").style.display = "none";
   document.getElementById("overlay").style.display = "none";
 }
@@ -56,4 +56,40 @@ function showBPA_Modal() {
 function hideBPA_Modal() {
   document.getElementById("BPA").style.display = "none";
   document.getElementById("overlay").style.display = "none";
+}
+
+function ouvrirGameCenterPDF() {
+  var cheminFichierWord = '../pdf/documentation_projet/GameCenter.pdf';
+
+  window.open(cheminFichierWord, '_blank');
+}
+
+function ouvrirRFTGPDF() {
+  var cheminFichierWord = '../pdf/documentation_projet/RFTG.pdf';
+
+  window.open(cheminFichierWord, '_blank');
+}
+
+function ouvrirStructurAllPDF() {
+  var cheminFichierWord = '../pdf/documentation_projet/StructurAll.pdf';
+
+  window.open(cheminFichierWord, '_blank');
+}
+
+function ouvrirPopixPDF() {
+  var cheminFichierWord = '../pdf/documentation_projet/Popix.pdf';
+
+  window.open(cheminFichierWord, '_blank');
+}
+
+function ouvrirLMGPDF() {
+  var cheminFichierWord = '../pdf/documentation_projet/LMG.pdf';
+
+  window.open(cheminFichierWord, '_blank');
+}
+
+function ouvrirBPAPDF() {
+  var cheminFichierWord = '../pdf/documentation_projet/BPA.pdf';
+
+  window.open(cheminFichierWord, '_blank');
 }
