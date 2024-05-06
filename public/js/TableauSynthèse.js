@@ -101,39 +101,40 @@ function loadExcel(url) {
   
   function getCellStyle(cell) {
     if (!cell || !cell.s) return '';
-  
+
     var style = cell.s;
     var cssStyle = '';
-  
+
     if (style.fill && style.fill.type === 'pattern' && style.fill.pattern === 'solid') {
-      cssStyle += 'background-color:' + style.fill.fgColor.rgb.substring(2) + ';';
+        cssStyle += 'background-color:' + style.fill.fgColor.rgb.substring(2) + ';';
     }
     if (style.font && style.font.color && style.font.color.rgb) {
-      cssStyle += 'color:' + style.font.color.rgb.substring(2) + ';';
+        cssStyle += 'color:' + style.font.color.rgb.substring(2) + ';';
     }
-  
-    // Appliquer des styles spécifiques en fonction de la largeur de l'écran
+
     var screenWidth = window.innerWidth;
-  
-    if (screenWidth <= 1040) {
-      cssStyle += 'font-size: 14px;';
-    }
-  
-    if (screenWidth <= 800) {
-      cssStyle += 'font-size: 12px;';
-    }
-  
-    if (screenWidth <= 700) {
-      cssStyle += 'font-size: 10px;';
-    }
-  
-    if (screenWidth <= 500) {
-      cssStyle += 'font-size: 8px;';
-      cssStyle += 'padding: 2px;';
-    }
-  
+
+    // // Appliquer la classe small-screen si l'écran est de taille réduite
+    // if (screenWidth <= 1040) {
+    //     cssStyle += 'font-size: 14px;';
+    // }
+
+    // if (screenWidth <= 800) {
+    //     cssStyle += 'font-size: 12px;';
+    // }
+
+    // if (screenWidth <= 700) {
+    //     cssStyle += 'font-size: 10px;';
+    // }
+
+    // if (screenWidth <= 500) {
+    //     cssStyle += 'font-size: 8px;';
+    //     cssStyle += 'padding: 2px;';
+    // }
+
     return cssStyle;
-  }
+}
+
   
   // Charger le fichier Excel au chargement de la page
   document.addEventListener("DOMContentLoaded", function () {

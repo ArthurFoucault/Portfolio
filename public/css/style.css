@@ -2169,7 +2169,7 @@ figure {
 	}
   }
   
-@media screen and ( max-width: 1040px ) {
+@media ( max-width: 1040px ) {
 
 	body {
 		font-size: 16px;
@@ -2188,13 +2188,9 @@ figure {
 		font-size: 17px;
 	}
 
-	.small-screen td {
-        font-size: 14px;
-    }
-
 }
 
-@media screen and ( max-width: 800px ) {
+@media ( max-width: 800px ) {
 
 	body {
 		font-size: 18px;
@@ -2395,13 +2391,9 @@ figure {
 		margin-top: 60px;
 	}
 
-	.small-screen td {
-        font-size: 12px;
-    }
-
 }
 
-@media screen and ( max-width: 700px ) {
+@media ( max-width: 700px ) {
 
 	body {
 		font-size: 16px;
@@ -2585,13 +2577,9 @@ figure {
 		display: none;
 	}
 
-	.small-screen td {
-        font-size: 10px;
-    }
-
 }
 
-@media screen and ( max-width: 500px ) {
+@media ( max-width: 500px ) {
 
 	body {
 		font-size: 15px;
@@ -2729,10 +2717,5 @@ figure {
 	.footer {
 		margin-top: 40px;
 	}
-
-	.small-screen td {
-        font-size: 8px;
-        padding: 2px;
-    }
 
 }
