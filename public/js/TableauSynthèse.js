@@ -140,3 +140,20 @@ function loadExcel(url) {
     var excelUrl = "https://arthurfoucault.github.io/Portfolio/Excel/6- Annexe 6-1 - Tableau de synthèse - Epreuve E4 - BTS SIO 2023.xlsx";
     loadExcel(excelUrl);
   });
+
+  function adjustTableSize() {
+    var table = document.querySelector('table');
+    if (!table) return;
+
+    var screenWidth = window.innerWidth;
+    if (screenWidth <= 1040) {
+        table.classList.add('small-screen');
+    } else {
+        table.classList.remove('small-screen');
+    }
+}
+
+
+  // Appeler adjustTableSize lors du chargement initial et lors du redimensionnement de la fenêtre
+document.addEventListener("DOMContentLoaded", adjustTableSize);
+window.addEventListener("resize", adjustTableSize);
