@@ -3,6 +3,7 @@
     <head>
         <title>Portfolio - BTS SIO SLAM</title>
         <link rel="stylesheet" type="text/css" href="../public/css/style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <style>
             table {
                 border-collapse: collapse;
@@ -22,30 +23,45 @@
                 background-color: blue;
             }
 
+            .excel-table table {
+                width: 100%;
+            }
+            
+            /* Styles pour réduire la taille du tableau en fonction de la largeur de l'écran */
             @media screen and (max-width: 1040px) {
-                .small-screen td {
-                    font-size: 14px !important;
+                .excel-table td {
+                    font-size: 14px;
                 }
             }
-    
+            
             @media screen and (max-width: 800px) {
-                .small-screen td {
-                    font-size: 12px !important;
+                .excel-table td {
+                    font-size: 12px;
                 }
             }
-    
+            
             @media screen and (max-width: 700px) {
-                .small-screen td {
-                    font-size: 10px !important;
+                .excel-table td {
+                    font-size: 10px;
                 }
             }
-    
+            
             @media screen and (max-width: 500px) {
-                .small-screen td {
-                    font-size: 8px !important;
-                    padding: 2px !important;
+                .excel-table td {
+                    font-size: 8px;
+                    padding: 2px;
                 }
             }
+
+            @media only screen and (max-width: 600px) {
+                #excel-preview {
+                    width: 100%;
+                    max-width: 100%;
+                    min-width: auto; /* Réinitialiser la largeur minimale pour les appareils mobiles */
+                }
+            }
+            
+            
         </style>
     </head>
     <body>
@@ -128,7 +144,8 @@
             <!-- .navigation -->
             <main class="wrapper section-inner group" id="site-content">
 
-                <div id="excel-preview"></div>
+                <div id="excel-preview" class="excel-table"></div>
+
                 
                 <a href="../Excel/6- Annexe 6-1 - Tableau de synthèse - Epreuve E4 - BTS SIO 2023.xlsx" download>Télécharger le fichier Excel</a>
             </main>

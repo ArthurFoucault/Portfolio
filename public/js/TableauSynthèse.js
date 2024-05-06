@@ -112,26 +112,6 @@ function loadExcel(url) {
         cssStyle += 'color:' + style.font.color.rgb.substring(2) + ';';
     }
 
-    var screenWidth = window.innerWidth;
-
-    // // Appliquer la classe small-screen si l'écran est de taille réduite
-    // if (screenWidth <= 1040) {
-    //     cssStyle += 'font-size: 14px;';
-    // }
-
-    // if (screenWidth <= 800) {
-    //     cssStyle += 'font-size: 12px;';
-    // }
-
-    // if (screenWidth <= 700) {
-    //     cssStyle += 'font-size: 10px;';
-    // }
-
-    // if (screenWidth <= 500) {
-    //     cssStyle += 'font-size: 8px;';
-    //     cssStyle += 'padding: 2px;';
-    // }
-
     return cssStyle;
 }
 
@@ -141,20 +121,3 @@ function loadExcel(url) {
     var excelUrl = "https://arthurfoucault.github.io/Portfolio/Excel/6- Annexe 6-1 - Tableau de synthèse - Epreuve E4 - BTS SIO 2023.xlsx";
     loadExcel(excelUrl);
   });
-
-  function adjustTableSize() {
-    var table = document.querySelector('table');
-    if (!table) return;
-
-    var screenWidth = window.innerWidth;
-    if (screenWidth <= 1040) {
-        table.classList.add('small-screen');
-    } else {
-        table.classList.remove('small-screen');
-    }
-}
-
-
-  // Appeler adjustTableSize lors du chargement initial et lors du redimensionnement de la fenêtre
-document.addEventListener("DOMContentLoaded", adjustTableSize);
-window.addEventListener("resize", adjustTableSize);
