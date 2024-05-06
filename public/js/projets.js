@@ -18,13 +18,13 @@ function hideRFTG_Modal() {
   document.getElementById("overlay").style.display = "none";
 }
 
-function showLMG_Modal() {
-  document.getElementById("LMG").style.display = "block";
+function showoffreCollective_Modal() {
+  document.getElementById("offreCollective").style.display = "block";
   document.getElementById("overlay").style.display = "block";
 }
 
-function hideLMG_Modal() {
-  document.getElementById("LMG").style.display = "none";
+function hideoffreCollective_Modal() {
+  document.getElementById("offreCollective").style.display = "none";
   document.getElementById("overlay").style.display = "none";
 }
 
@@ -82,8 +82,8 @@ function ouvrirPopixPDF() {
   window.open(cheminFichierWord, '_blank');
 }
 
-function ouvrirLMGPDF() {
-  var cheminFichierWord = '../pdf/documentation_projet/LMG.pdf';
+function ouvriroffreCollectivePDF() {
+  var cheminFichierWord = '../pdf/documentation_projet/offreCollective.pdf';
 
   window.open(cheminFichierWord, '_blank');
 }
