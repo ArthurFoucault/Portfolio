@@ -118,6 +118,6 @@ function loadExcel(url) {
   
   // Charger le fichier Excel au chargement de la page
   document.addEventListener("DOMContentLoaded", function () {
-    var excelUrl = "https://arthurfoucault.github.io/Portfolio/Excel/8- Annexe 8-1 - Tableau de synthèse - Epreuve E4 - BTS SIO 2024.xlsx";
+    var excelUrl = "https://arthurfoucaultportfolio.com/Excel/8- Annexe 8-1 - Tableau de synthèse - Epreuve E4 - BTS SIO 2024.xlsx";
     loadExcel(excelUrl);
   });
